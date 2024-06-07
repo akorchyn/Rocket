@@ -87,11 +87,11 @@ default-features = false
 features = ["fmt", "tracing-log", "parking_lot"]
 
 [dependencies.rocket_codegen]
-version = "0.6.0-dev"
+version = "0.5.1"
 path = "../codegen"
 
 [dependencies.rocket_http]
-version = "0.6.0-dev"
+version = "0.5.1"
 path = "../http"
 features = ["serde"]
 

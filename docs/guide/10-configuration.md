@@ -22,7 +22,7 @@ Rocket is asked to use, it must be able to read the following configuration
 values:
 
 | key                  | kind               | description                                     | debug/release default         |
-|----------------------|--------------------|-------------------------------------------------|-------------------------------|
+| -------------------- | ------------------ | ----------------------------------------------- | ----------------------------- |
 | `address`            | `IpAddr`           | IP address to serve on.                         | `127.0.0.1`                   |
 | `port`               | `u16`              | Port to serve on.                               | `8000`                        |
 | `workers`*           | `usize`            | Number of threads to use for executing futures. | cpu core count                |
@@ -247,7 +247,7 @@ Security). To enable TLS support:
 
    ```toml,ignore
    [dependencies]
-   rocket = { version = "0.6.0-dev", features = ["tls"] }
+   rocket = { version = "0.5.1", features = ["tls"] }
    ```
 
   2. Configure a TLS certificate chain and private key via the `tls.key` and
@@ -263,13 +263,13 @@ Security). To enable TLS support:
 The `tls` parameter is expected to be a dictionary that deserializes into a
 [`TlsConfig`] structure:
 
-| key                          | required  | type                                                          |
-|------------------------------|-----------|---------------------------------------------------------------|
-| `key`                        | **_yes_** | Path or bytes to DER-encoded ASN.1 PKCS#1/#8 or SEC1 key.     |
-| `certs`                      | **_yes_** | Path or bytes to DER-encoded X.509 TLS cert chain.            |
-| `ciphers`                    | no        | Array of [`CipherSuite`]s to enable.                          |
-| `prefer_server_cipher_order` | no        | Boolean for whether to [prefer server cipher suites].         |
-| `mutual`                     | no        | A map with [mutual TLS] configuration.                        |
+| key                          | required  | type                                                      |
+| ---------------------------- | --------- | --------------------------------------------------------- |
+| `key`                        | **_yes_** | Path or bytes to DER-encoded ASN.1 PKCS#1/#8 or SEC1 key. |
+| `certs`                      | **_yes_** | Path or bytes to DER-encoded X.509 TLS cert chain.        |
+| `ciphers`                    | no        | Array of [`CipherSuite`]s to enable.                      |
+| `prefer_server_cipher_order` | no        | Boolean for whether to [prefer server cipher suites].     |
+| `mutual`                     | no        | A map with [mutual TLS] configuration.                    |
 
 [`CipherSuite`]: @api/master/rocket/tls/enum.CipherSuite.html
 [prefer server cipher suites]: @api/master/rocket/tls/struct.TlsConfig.html#method.with_preferred_server_cipher_order
@@ -312,7 +312,7 @@ enabled and support configured via the `tls.mutual` config parameter:
 
    ```toml,ignore
    [dependencies]
-   rocket = { version = "0.6.0-dev", features = ["mtls"] }
+   rocket = { version = "0.5.1", features = ["mtls"] }
    ```
 
    This implicitly enables the `tls` feature.
@@ -331,7 +331,7 @@ The `tls.mutual` parameter is expected to be a dictionary that deserializes into
 [`MutualTls`] structure:
 
 | key         | required  | type                                                        |
-|-------------|-----------|-------------------------------------------------------------|
+| ----------- | --------- | ----------------------------------------------------------- |
 | `ca_certs`  | **_yes_** | Path or bytes to DER-encoded X.509 TLS cert chain.          |
 | `mandatory` | no        | Boolean controlling whether the client _must_ authenticate. |
 

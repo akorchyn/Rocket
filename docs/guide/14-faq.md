@@ -69,7 +69,7 @@ a runtime cost), impacting Rocket's clean build-time. For comparison, here's
 what a clean build of "Hello, world!" looks like for some Rust web frameworks:
 
 | Framework       | Dependencies | Build Time | Build w/ `sscache` |
-|-----------------|--------------|------------|--------------------|
+| --------------- | ------------ | ---------- | ------------------ |
 | Rocket 0.5      | 105          | 12s        | 5s                 |
 | Actix-Web 4.4.0 | 119          | 11s        | 4s                 |
 | Axum 0.6.20     | 78           | 10s        | 4s                 |
@@ -585,7 +585,7 @@ is to depend on a `contrib` library from git while also depending on a
 `crates.io` version of Rocket or vice-versa:
 
 ```toml
-rocket = "0.6.0-dev"
+rocket = "0.5.1"
 rocket_db_pools = { git = "https://github.com/rwf2/Rocket.git" }
 ```
 

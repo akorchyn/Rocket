@@ -34,7 +34,7 @@ optional = true
 features = ["loader", "speedups", "json", "urlencode"]
 
 [dependencies.rocket]
-version = "0.6.0-dev"
+version = "0.5.1"
 path = "../../core/lib"
 default-features = false
 

@@ -307,7 +307,7 @@ Static paths carry more weight than static queries. The same is true for partial
 and wild paths. This results in the following default ranking table:
 
 | path color | query color | default rank |
-|------------|-------------|--------------|
+| ---------- | ----------- | ------------ |
 | static     | static      | -12          |
 | static     | partial     | -11          |
 | static     | wild        | -10          |
@@ -626,7 +626,7 @@ feature:
 
 ```toml
 ## in Cargo.toml
-rocket = { version = "0.6.0-dev", features = ["secrets"] }
+rocket = { version = "0.5.1", features = ["secrets"] }
 ```
 
 The API for retrieving, adding, and removing private cookies is identical except
@@ -805,7 +805,7 @@ complete example.
   feature can be enabled in the `Cargo.toml`:
 
   ```toml
-  rocket = { version = "0.6.0-dev", features = ["json"] }
+  rocket = { version = "0.5.1", features = ["json"] }
   ```
 
 ### Temporary Files
@@ -1230,9 +1230,9 @@ below with two form fields:
 
 ```html
 food.bart[bar:foo].blam[0_0][1000]=some-value&another_field=another_val
-|-------------------------------|   name
-|--| |--| |-----|  |--| |-|  |--|   keys
-|--| |--| |-| |-|  |--| |-|  |--|   indices
+| ------------------------------- | name |
+| ------------------------------- || --  |  | ----- |  | -- |  | - |  | -- | keys |
+| --- ||--| |-| |-|  |--| |-|  |--|   indices
 ```
 
 Rocket _pushes_ form fields to `FromForm` types as they arrive. The type then
@@ -1832,7 +1832,7 @@ parameters are declared like path parameters but otherwise handled like regular
 URL-encoded form fields. The table below summarizes the analogy:
 
 | Path Syntax | Query Syntax | Path Type Bound  | Query Type Bound |
-|-------------|--------------|------------------|------------------|
+| ----------- | ------------ | ---------------- | ---------------- |
 | `<param>`   | `<param>`    | [`FromParam`]    | [`FromForm`]     |
 | `<param..>` | `<param..>`  | [`FromSegments`] | [`FromForm`]     |
 | `static`    | `static`     | N/A              | N/A              |

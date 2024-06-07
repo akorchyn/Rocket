@@ -42,7 +42,7 @@ version = "0.1.0"
 path = "../codegen"
 
 [dependencies.rocket]
-version = "0.6.0-dev"
+version = "0.5.1"
 path = "../../../core/lib"
 default-features = false
 
