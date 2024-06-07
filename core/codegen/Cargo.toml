@@ -1,6 +1,6 @@
 [package]
 name = "rocket_codegen"
-version = "0.6.0-dev"
+version = "0.5.1"
 authors = ["Sergio Benitez <sb@sergio.bz>"]
 description = "Procedural macros for the Rocket web framework."
 documentation = "https://api.rocket.rs/master/rocket_codegen/"
